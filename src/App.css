@@ -1,38 +1,74 @@
-.App {
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   text-align: center;
+  font-size: x-large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fact {
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cat-fact-container {
+  background-image: url("./assets/muzzle-sleepy-orange-cat.jpg");
+
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pip {
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  display: block;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.button {
+  padding: 20px;
+  cursor: pointer;
   color: white;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition-timing-function: ease;
+
+  width: 75px;
+  height: 75px;
+  transition: width 2s, height 2s, transform 2s;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  transform: rotate(360deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote {
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 3px solid #f1f1f1;
+  width: 80vw;
+  z-index: 2;
+  padding: 20px;
 }
